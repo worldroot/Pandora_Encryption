@@ -17,6 +17,7 @@ app.get('/', function(req, res){
     res.sendFile('/index.html', {root: "."});
   });
 
+  // Not Used in the v0.1
 app.post('/upload-avatar', async (req, res) => {
   try {
       if(!req.files) {

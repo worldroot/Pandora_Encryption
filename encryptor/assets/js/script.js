@@ -54,12 +54,12 @@ $(function(){
 			alert('Please choose files smaller than 1mb, otherwise you may crash your browser. \nThis is a known issue. See the tutorial.');
 			return;
 		}
-		let xhr = new XMLHttpRequest(); //creating new xhr object (AJAX)
-		const formData = new FormData();
+	//	let xhr = new XMLHttpRequest(); //creating new xhr object (AJAX)
+	//	const formData = new FormData();
 
-		const files = document.querySelector('[name=file]').files;
+		//const files = document.querySelector('[name=file]').files;
 
-		formData.append('avatar', files[0]);
+		//formData.append('avatar', files[0]);
 
 	//	xhr.onload = () => {
 	//		console.log(xhr.response);
@@ -68,13 +68,13 @@ $(function(){
 
 
 		//xhr.send(file); //sending form data
-		fetch('/upload-avatar', {
-			method: 'POST',
-			body: file
-		})
-		.then(res => res.json())
-		.then(json => console.log(json))
-		.catch(err => console.error(err));
+	//	fetch('/upload-avatar', {
+	//		method: 'POST',
+	//		body: file
+	//	})
+	//	.then(res => res.json())
+	//	.then(json => console.log(json))
+	//	.catch(err => console.error(err));
 
 		step(3);
 	});
@@ -92,6 +92,7 @@ $(function(){
 
 
 	/* Step 3 */
+	// NOT used in V0.1
 	$('input.button.send_email').click(function (){
 
 			Email.send({
@@ -145,7 +146,7 @@ $(function(){
 			reader.onload = function(e){
 
 
-				///P1 Generate the pre 
+				///P1 Generate the pre Pass
 				
 				const start = new Date();
 				const pre_pass = start.getDate();
@@ -185,7 +186,7 @@ $(function(){
 					To : email,
 					From : "sender@example.com",
 					Subject : "Test email",
-					Body : "<html><h2>Pandora Key Cloud</h2><strong>Thank you for using our services</strong><br>"+"<h1>Your file is ready!</br> This is our unique key generated do not loose it otherwise it will not be possible to decrypt your file :"+ randompass +" </h1>"+"</br></html>"
+					Body : "<html><h2>Pandora Key Cloud</h2><strong>Thank you for using our services</strong><br>"+"<h1>Your file is ready! Download It today before 00:00</br> This is our unique key generated do not loose it otherwise it will not be possible to decrypt your file :"+ randompass +" </h1>"+"</br></html>"
 				}).then(
 				message => alert(message)
 			);
