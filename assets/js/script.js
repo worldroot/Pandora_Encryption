@@ -186,7 +186,7 @@ $(function(){
 					To : email,
 					From : "sender@example.com",
 					Subject : "Test email",
-					Body : "<html><h2>Pandora Key Cloud</h2><strong>Thank you for using our services</strong><br>"+"<h1>Your file is ready! Download It today before 00:00</br> This is our unique key generated do not loose it otherwise it will not be possible to decrypt your file :"+ randompass +" </h1>"+"</br></html>"
+					Body : "<html><h2>Pandora Key Cloud</h2><strong>Thank you for using our services</strong><br>"+"<h1>Your file is ready! Download It today before 00:00</br> This is our unique key generated do not loose it otherwise it will not be possible to decrypt your file :"+ randompass +" </h1>"+"</br> Yours,</br>Pandora Team</html>"
 				}).then(
 				message => alert(message)
 			);
